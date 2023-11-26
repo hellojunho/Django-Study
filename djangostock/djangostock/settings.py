@@ -55,7 +55,8 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
-        "APP_DIRS": True,
+        # "DIRS": [BASE_DIR / 'templates'], # 이렇게 하면 기본 템플릿 주소가 templates로 변경됨
+        "APP_DIRS": True,   # True이면, app directories loader가 동작 -> 템플릿을 찾아주는 로더
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
