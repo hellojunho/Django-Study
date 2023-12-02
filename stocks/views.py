@@ -6,7 +6,3 @@ from django.http import HttpResponse
 def home(request):
     # return HttpResponse("AAA") 
     return render(request, 'stocks/home.html') 
-
-def main(request):
-    # return HttpResponse("Hello World")
-    return render(request, 'stocks/home.html')
