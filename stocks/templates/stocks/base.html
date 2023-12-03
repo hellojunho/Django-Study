@@ -11,11 +11,17 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
 
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline" method="GET" action="{% url 'home' %}">
+        {% csrf_token %} <!-- csrf 공격 보안 -->
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="ticker">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
 
     {% block content %}
-    {% enblock %}
+    {% endblock %}
 
     <!-- Optional JavaScript; choose one of the two! -->
 
